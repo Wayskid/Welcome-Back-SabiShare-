@@ -307,7 +307,12 @@ aside .spanLogin{
     margin-top: 15px;
     font-family: 'Lucida Sans';
     font-weight: bold;
-    border-bottom: rgb(197, 195, 192) solid 1px;
+}
+
+.borderBottom{
+    background-color: rgb(197, 195, 192);
+    height: 1px;
+    width: 96%;
 }
 
 one{
