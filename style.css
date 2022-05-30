@@ -17,6 +17,13 @@ body{
 /*Navigation Bar*/
 
 nav{
+    position: fixed;
+    /*
+    Don't yet understand the importance of these commented properties
+    I feel I can do without them. Not sure 
+    z-index: 999;
+    top: 0;
+    left: 0; */
     background-color: rgb(14, 78, 216);
     display: flex;
     font-family: 'Lucida Sans';
@@ -99,6 +106,7 @@ container{
 aside a{
     display: flex;
     margin-left: 30px;
+    transition: 0.8s;
 }
 
 .spanHome{
@@ -208,6 +216,10 @@ aside .spanLogin{
     color: white;
 }
 
+.backGrey{
+    background-color: rgb(34, 34, 34);
+    padding: 160px 10px 40px 10px;
+}
 
 .About{
     display: flex;
@@ -367,9 +379,8 @@ aside .spanLogin{
     transition: all 0.4s ease-in-out
 }
 
+
 /* Media Query */
-
-
 
 
 @media (max-width:720px) {
@@ -396,19 +407,30 @@ aside .spanLogin{
     container .preview{
         display: block;
         text-align: left;
+    }
+
+    .Cpreview a{
         font-size: smaller;
     }
 
-    .Cpreview a, .Cpreview .lost{
-        font-size: smaller;
+
+
+    .Rpreview{
+        margin-top: 15px;
     }
 
     .About{
         display:flex;
         flex-direction: column;
-        align-items: center;
         width: 100%;
-        font-size: 10px;
+    }
+
+    .aboutText{
+        width: 100%;
+    }
+
+    .leftAbout, .rightAbout{
+        width: 100%;
     }
 
     .windows{
@@ -418,11 +440,12 @@ aside .spanLogin{
     .compatibility, .fingerprint{
         display: flex;
         flex-direction: column;
-        align-items: center;
+        text-align: left;
     }
 
     .shaText, .md5Text{
         padding: 6px;
+        width: 100%;
     }
 
     .footer{

@@ -66,10 +66,14 @@ document.querySelector(".clickCopy2").addEventListener("click", () => {
   navigator.clipboard.writeText(copiedContent);
 });
 
+
+
+
+
 /*MediaQuery*/
 
 
 
-if (mediaQuery.matches) {
-  alert("It matches");
-}
+// if (mediaQuery.matches) {
+//   alert("It matches");
+// }
