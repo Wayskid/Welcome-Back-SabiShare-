@@ -1,5 +1,7 @@
 /*Menu Option*/
 
+
+const mediaQuery = window.matchMedia("(min-width:720px)");
 const main = document.querySelector(".main");
 const aside = document.querySelector(".aside")
 const burger = document.querySelector(".burger");
@@ -7,8 +9,12 @@ let homeEmpty = document.querySelector(".spanHome");
 let loginEmpty = document.querySelector(".spanLogin");
 let signupEmpty = document.querySelector(".spanSignup");
 
+
+
 burger.addEventListener("click", () => {
 
+   if (mediaQuery.matches) {
+       
     if (homeEmpty.textContent.length == 0) {
         aside.style.width = "15%";
         homeEmpty.textContent = "Home";
@@ -31,6 +37,11 @@ burger.addEventListener("click", () => {
     } else{
         signupEmpty.textContent = "";
     }
+    return;
+   } 
+   //else {
+       
+   //}
     
     
 });
@@ -57,7 +68,7 @@ document.querySelector(".clickCopy2").addEventListener("click", () => {
 
 /*MediaQuery*/
 
-const mediaQuery = window.matchMedia("(max-width:720px)");
+
 
 if (mediaQuery.matches) {
   alert("It matches");

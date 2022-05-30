@@ -298,12 +298,11 @@ aside .spanLogin{
 
 .footer{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     color: rgb(197, 195, 192);
     background-color: rgb(14, 14, 14);
     padding-top: 50px;
     padding-bottom: 30px;
-    padding-right: 60px;
     margin-top: 15px;
     font-family: 'Lucida Sans';
     font-weight: bold;
@@ -315,12 +314,13 @@ aside .spanLogin{
     width: 96%;
 }
 
-one{
-    margin-left: 40px;
+.one{
+    margin-left: -50px;
 }
 
 .footer .footerLogo{
-    font-size: 30px;
+    font-size: 50px;
+    
 }
 
 .footNote{
@@ -328,13 +328,13 @@ one{
     text-align: center;
 }
 
-two p, three p, four p{
+.two p, .three p, .four p{
     font-size: 20px;
     margin-bottom: 20px;
     text-align: right;
 }
 
-two li, three li, four li{
+.two li, .three li, .four li{
     font-size: 13px;
     margin-bottom: 4px;
     text-align: right;
@@ -382,7 +382,7 @@ two li, three li, four li{
     }
 
     .main{
-        width: 100%;
+        min-width: 100%;
     }
 
     .logo a{
@@ -426,34 +426,39 @@ two li, three li, four li{
     }
 
     .footer{
-        display: block;
-        width: 80%;
-        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        font-size: larger;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 
-    one{
-        display: block;
-        text-align: center;
+    .one{
         margin-bottom: 20px;
-        margin-right: 40px;
+        margin-left: 5px;
     }
 
-    .footer .footerLogo{
-        font-size: 30px;
-        text-align: center;
+    .two, .three, .four{
+        margin-left: 5px;
     }
 
-    two p, three p, four p{
+    .two p, .three p, .four p{
         text-align: center;
         margin-bottom: 10px;
         margin-top: 20px;
     }
     
-    two li, three li, four li{
+    .two li, .three li, .four li{
         text-align: center;
         margin-bottom: 10px;
     }
     
+    .borderBottom{
+        width: 96%;
+        margin: 0 auto;
+    }
 
 };
 
