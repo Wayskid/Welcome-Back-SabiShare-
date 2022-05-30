@@ -19,11 +19,11 @@ body{
 nav{
     position: fixed;
     /*
-    Don't yet understand the importance of these commented properties
+    Don't yet understand the importance of these commented property
     I feel I can do without them. Not sure 
     z-index: 999;
+     */
     top: 0;
-    left: 0; */
     background-color: rgb(14, 78, 216);
     display: flex;
     font-family: 'Lucida Sans';
