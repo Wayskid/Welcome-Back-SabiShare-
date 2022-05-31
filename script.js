@@ -1,54 +1,44 @@
 /*Menu Option*/
 
-
-const mediaQuery = window.matchMedia("(min-width:720px)");
-const main = document.querySelector(".main");
-const aside = document.querySelector(".aside")
+const desktopQuery = window.matchMedia("(min-width:720px)");
+const mobileQuery = window.matchMedia("(max-width:720px)");
 const burger = document.querySelector(".burger");
-let homeEmpty = document.querySelector(".spanHome");
-let loginEmpty = document.querySelector(".spanLogin");
-let signupEmpty = document.querySelector(".spanSignup");
+const main = document.querySelector(".main");
+const aside = document.querySelector(".aside");
+const asideMobile = document.querySelector(".asideMobile");
+const asideLinks = document.querySelector(".asideLinks");
 
 
 
-burger.addEventListener("click", () => {
-
-   if (mediaQuery.matches) {
-       
-    if (homeEmpty.textContent.length == 0) {
-        aside.style.width = "15%";
-        homeEmpty.textContent = "Home";
-        main.style.width = "85%";
-        aside.style.transition = "0.9s";
-    } else{
-        homeEmpty.textContent = "";
-        aside.style.width = "7%";
-        main.style.width = "93%";
+if (desktopQuery.matches) {burger.addEventListener("click", () => {
+  
+    asideLinks.classList.toggle("showLinks")
+    main.classList.toggle("shrinkMain");
+    burger.classList.toggle("cross")
     }
+     )}
 
-    if (loginEmpty.textContent.length == 0) {
-        loginEmpty.textContent = "Login";
-    } else{
-        loginEmpty.textContent = "";
-    }
+else if(mobileQuery.matches){burger.addEventListener("click", () => {
+  
+      burger.classList.toggle("cross")
+      asideMobile.classList.toggle("showAsideMobile");
+      }
+       )};
 
-    if (signupEmpty.textContent.length == 0) {
-        signupEmpty.textContent = "SignUp";
-    } else{
-        signupEmpty.textContent = "";
-    }
-    return;
-   } 
-   //else {
-       
-   //}
-    
-    
-});
+
+
+
+//Made page refresh on resize //
+
+window.addEventListener("resize" , () => {
+    location.reload()
+    console.log("working");
+  });
 
 
 
 /*Click to copy*/
+
 
 /*1st Button*/
 const clickCopy1 = document.querySelector(".clickCopy1");
@@ -67,13 +57,3 @@ document.querySelector(".clickCopy2").addEventListener("click", () => {
 });
 
 
-
-
-
-/*MediaQuery*/
-
-
-
-// if (mediaQuery.matches) {
-//   alert("It matches");
-// }

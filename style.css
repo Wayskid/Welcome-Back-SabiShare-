@@ -81,72 +81,126 @@ nav .burger .bar{
     margin: 3px 0;
 }
 
+.burger:hover .bar:nth-child(2){
+    background-color: black;
+    margin-left: 2px;
+    transition: 0.4s;
+}
+
 /*Body Flex*/
 
 container{
     display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+    /* column-gap: 30px; */
 }
 
 /*Aside Styling*/
 
 .aside{
+    position: fixed;
+    top: 70px;
+    bottom: 0;
+    left: 0;
     background-color: rgb(14, 14, 14);
     color: rgb(197, 195, 192);
-    height: 100%;
-    width: 7%;
+    width: 70px;
     display: flex;
     flex-direction: column;
-    align-self: center;
-    margin-bottom: 100px;
+    justify-content: center;
+    align-items: center;
     row-gap: 20px;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
 }
 
 
-
-aside a{
+.asideLinks{
+    background-color: rgb(14, 14, 14);
+    color: rgb(197, 195, 192);
+    position: fixed;
+    top: 70px;
+    bottom: 0;
+    left: -70px;
+    width: 60px;
     display: flex;
-    margin-left: 30px;
-    transition: 0.8s;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica, sans-serif;
+    row-gap: 20px;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
 }
 
-.spanHome{
+
+.asideMobile{
+    background-color: rgb(14, 14, 14);
+    color: rgb(197, 195, 192);
+    position: fixed;
+    top: 70px;
+    bottom: 0;
+    left: -120px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-family: Helvetica, sans-serif;
-    margin-left: 40px;
-    padding-right: 10px;
+    row-gap: 20px;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
 }
 
-aside .spanSignup{
-    margin-left: 38px;
-    font-family: Helvetica, sans-serif;
-    padding-right: 10px;
+
+.asideMobile a{
+    display: flex;
+    column-gap: 30px;
 }
 
-aside .spanLogin{
-    margin-left: 41.5px;
-    font-family: Helvetica, sans-serif;
-    padding-right: 10px;
+
+.signupSlideMobile i{
+    margin-left: 7px;
 }
+
+
+.spanSignupMobile{
+    margin-left: -7px;
+}
+
+
+
 
 /*Main Body*/
 
 .main{
-    width: 93%;
-    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
 }
+
+
 
 .backGrey{
     background-color: rgb(34, 34, 34);
     padding: 160px 60px 40px 60px;
 }
 
+
+
 .preview{
     background-color: rgb(14, 14, 14);
     color: rgb(197, 195, 192);
     display: flex;
     column-gap: 0.5em;
-    padding: 30px 10px 20px 20px;
+    padding: 50px 10px 20px 20px;
     font-family: 'Lucida Sans';
     width: 100%;
+    margin-top: 50px;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
 }
 
 .Lpreview{
@@ -216,24 +270,23 @@ aside .spanLogin{
     color: white;
 }
 
-.backGrey{
-    background-color: rgb(34, 34, 34);
-    padding: 160px 10px 40px 10px;
-}
+
 
 .About{
     display: flex;
+    flex-direction: row;
     margin-top: 100px;
     font-family: 'Lucida Sans';
-    width: 100%;
+    font-size: 19px;
+    width: 80%;
 }
 
 .leftAbout{
-    width: 68%;
+    width: 80%;
 }
 
 .rightAbout{
-    width: 32%;
+    width: 20%;
 }
 
 .aboutFiles{
@@ -258,6 +311,7 @@ aside .spanLogin{
     margin-bottom: 8px;
     margin-top: 10px;
 }
+
 
 .windows{
     background-color: rgb(14, 14, 14);
@@ -306,6 +360,8 @@ aside .spanLogin{
     margin-top: 8px;
 }
 
+
+
 /*Footer Styling*/
 
 .footer{
@@ -313,26 +369,19 @@ aside .spanLogin{
     justify-content: space-around;
     color: rgb(197, 195, 192);
     background-color: rgb(14, 14, 14);
-    padding-top: 50px;
+    padding-top: 65px;
     padding-bottom: 30px;
-    margin-top: 15px;
     font-family: 'Lucida Sans';
     font-weight: bold;
-}
-
-.borderBottom{
-    background-color: rgb(197, 195, 192);
-    height: 1px;
-    width: 96%;
+    column-gap: 2%;
 }
 
 .one{
-    margin-left: -50px;
+    margin-left: 0;
 }
 
 .footer .footerLogo{
     font-size: 50px;
-    
 }
 
 .footNote{
@@ -352,13 +401,21 @@ aside .spanLogin{
     text-align: right;
 }
 
+.borderBottom{
+    background-color: rgb(197, 195, 192);
+    height: 1px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 96%;
+}
 
 .created{
     background-color: rgb(14, 14, 14);
     color: rgb(197, 195, 192);
     text-align: right;
     font-size: 13px;
-    padding: 50px 60px 20px 60px;
+    padding: 50px 10px 20px 60px;
 }
 
 
@@ -372,12 +429,51 @@ aside .spanLogin{
 /* JavaScript Classes */
 
 
-
-.createSpace{
-    width: 200px;
+/*Show Aside Links*/
+.main.shrinkMain{
+    margin-left: 130px;
     -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out
+    transition: all 0.6s ease-in-out;
 }
+
+.main.increaseMain{
+    margin-left: 0;
+    width: 100%;
+}
+
+.asideLinks.showLinks {
+    left: 70px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.6s ease-in-out;
+}
+
+
+.asideMobile.showAsideMobile {
+    left: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.6s ease-in-out;
+}
+
+
+
+/*Cross Hamburger*/
+.cross .bar:nth-child(2){
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.cross .bar:nth-child(1){
+    transform: rotate(45deg) translateY(7px);
+    transition: 0.4s;
+}
+
+.cross .bar:nth-child(3){
+    transform: rotate(-45deg) translateY(-7px);
+    transition: 0.4s;
+}
+
+
+
 
 
 /* Media Query */
@@ -388,12 +484,19 @@ aside .spanLogin{
         width: 100%;
     }
     
+    
     .aside {
         display: none;
     }
 
+    .asideLinks{
+        display: none;
+    }
+
     .main{
-        min-width: 100%;
+        display: block;
+        margin-left: 0;
+        width: 100%;
     }
 
     .logo a{
@@ -412,8 +515,6 @@ aside .spanLogin{
     .Cpreview a{
         font-size: smaller;
     }
-
-
 
     .Rpreview{
         margin-top: 15px;
