@@ -23,6 +23,8 @@ nav{
     I feel I can do without them. Not sure 
     z-index: 999;
      */
+    right: 0;
+    left: 0;
     top: 0;
     background-color: rgb(14, 78, 216);
     display: flex;
